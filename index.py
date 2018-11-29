@@ -3,6 +3,7 @@ import datetime
 
 
 def handler(event, context):
+    print(event)        
     name='Akshay'
     greet= 'Hello, '+ name
     data = {
