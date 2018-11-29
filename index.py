@@ -3,7 +3,7 @@ import datetime
 
 
 def handler(event, context):
-    print(event['body'])        
+    print(event['requestContext']['identity']['userArn'])        
     name='Akshay'
     greet= 'Hello, '+ name
     data = {
