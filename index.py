@@ -4,14 +4,17 @@ import datetime
 
 def handler(event, context):
     try:
-        print(event['requestContext']['identity']['userArn'])        
+        print(event['requestContext']['identity']['userArn'])
+        caller_name=event['requestContext']['identity']['userArn']
+        split_name=caller_name.split("/")
+        greet_name=split_name[-1]
     except:
         print(event)
-    name='Akshay'
-    greet= 'Hello, '+ name
+        greet_name='User'
+    greet= 'Hello, '+ greet_name
     data = {
         'output': 'Hello World',
-        'name': greet,
+        'name': greet_name,
         'timestamp': datetime.datetime.utcnow().isoformat()
         
     }
