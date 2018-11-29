@@ -4,7 +4,7 @@ import datetime
 
 def handler(event, context):
     name='Akshay'
-    greet= 'Hello, '+name
+    greet= 'Hello, '+ name
     data = {
         'output': 'Hello World',
         'name': greet,
