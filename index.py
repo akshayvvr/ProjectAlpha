@@ -3,7 +3,7 @@ import datetime
 
 
 def handler(event, context):
-    print(event)        
+    print(event['body'])        
     name='Akshay'
     greet= 'Hello, '+ name
     data = {
@@ -15,3 +15,4 @@ def handler(event, context):
     return {'statusCode': 200,
             'body': json.dumps(data),
             'headers': {'Content-Type': 'application/json'}}
+
