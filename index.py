@@ -4,9 +4,10 @@ import datetime
 
 def handler(event, context):
     name=input("Enter your name: ")
+    greet= f'Hello, {name}'
     data = {
         'output': 'Hello World',
-        'name': f'Hello, {name}',
+        'name': greet,
         'timestamp': datetime.datetime.utcnow().isoformat()
         
     }
